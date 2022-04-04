@@ -14,9 +14,9 @@
     <header class="hero">
       <nav class="flex-row justify-space-between">
         <a href="/">Home</a>
-        {{#if loggedIn}}
         <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style">Logout</button>
+        {{#if loggedIn}}
+        <button id="logout" class="logout">Logout</button>
         {{else}}
         <a href="/login">Login</a>
         {{/if}}
