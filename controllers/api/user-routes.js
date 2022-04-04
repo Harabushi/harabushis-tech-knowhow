@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
-const withAuth = require('../../utils/auth');
 
 // GET all users, mostly for testing purposes
 router.get('/', (req, res) => {
@@ -52,7 +51,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST a new user
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
   // expects {username: 'Harabushi', email: 'harabushi@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
