@@ -1,0 +1,31 @@
+<section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input class="form-label" type="text" id="post-title" name="post-title" />
+    </div>
+    <div>
+      <label for="content">Post</label>
+      <textarea rows="5" cols="40" class="form-textarea" id="content" name="content" placeholder="What's on your mind?"></textarea>
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> posts post}}
+        <button class="btn">Edit</button>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>
