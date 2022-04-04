@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harabushi's Tech Know-How</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="hero">
+      <nav class="flex-row justify-space-between">
+        <a href="/">Home</a>
+        {{#if loggedIn}}
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+      <h1 class="app-title">
+        Harabushi's Tech Know-How
+      </h1>
+    </header>
+
+    <main>
+      {{{ body }}}
+    </main>
+
+    <footer>
+      This page brought to you courtesy of HarabushiCreations &#10084
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
